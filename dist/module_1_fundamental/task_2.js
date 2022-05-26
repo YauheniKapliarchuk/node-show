@@ -1,0 +1,19 @@
+"use strict";
+
+var _fs = _interopRequireDefault(require("fs"));
+
+var _csvtojson = _interopRequireDefault(require("csvtojson"));
+
+var _stream = require("stream");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var csvFilePath = "src/module_1_fundamental/csv/Book.csv";
+var txtFilePath = "src/module_1_fundamental/csv/Book.txt"; // @ts-ignore
+
+(0, _stream.pipeline)(_fs["default"].createReadStream(csvFilePath), (0, _csvtojson["default"])(), _fs["default"].createWriteStream(txtFilePath), function (error) {
+  if (error) {
+    console.log("Something went wrong. ERROR --- : " + error);
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9tb2R1bGVfMV9mdW5kYW1lbnRhbC90YXNrXzIudHMiXSwibmFtZXMiOlsiY3N2RmlsZVBhdGgiLCJ0eHRGaWxlUGF0aCIsImZzIiwiY3JlYXRlUmVhZFN0cmVhbSIsImNyZWF0ZVdyaXRlU3RyZWFtIiwiZXJyb3IiLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiOztBQUFBOztBQUNBOztBQUNBOzs7O0FBQ0EsSUFBTUEsV0FBVyxHQUFHLHVDQUFwQjtBQUNBLElBQU1DLFdBQVcsR0FBRyx1Q0FBcEIsQyxDQUVBOztBQUNBLHNCQUNJQyxlQUFHQyxnQkFBSCxDQUFvQkgsV0FBcEIsQ0FESixFQUVJLDRCQUZKLEVBR0lFLGVBQUdFLGlCQUFILENBQXFCSCxXQUFyQixDQUhKLEVBSUksVUFBQ0ksS0FBRCxFQUFrQjtBQUNkLE1BQUlBLEtBQUosRUFBVztBQUNQQyxJQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWSx1Q0FBdUNGLEtBQW5EO0FBQ0g7QUFDSixDQVJMIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGZzIGZyb20gXCJmc1wiO1xuaW1wb3J0IGNzdkNvbnZlcnRlciBmcm9tIFwiY3N2dG9qc29uXCI7XG5pbXBvcnQgeyBwaXBlbGluZSB9IGZyb20gXCJzdHJlYW1cIjtcbmNvbnN0IGNzdkZpbGVQYXRoID0gXCJzcmMvbW9kdWxlXzFfZnVuZGFtZW50YWwvY3N2L0Jvb2suY3N2XCI7XG5jb25zdCB0eHRGaWxlUGF0aCA9IFwic3JjL21vZHVsZV8xX2Z1bmRhbWVudGFsL2Nzdi9Cb29rLnR4dFwiO1xuXG4vLyBAdHMtaWdub3JlXG5waXBlbGluZShcbiAgICBmcy5jcmVhdGVSZWFkU3RyZWFtKGNzdkZpbGVQYXRoKSxcbiAgICBjc3ZDb252ZXJ0ZXIoKSxcbiAgICBmcy5jcmVhdGVXcml0ZVN0cmVhbSh0eHRGaWxlUGF0aCksXG4gICAgKGVycm9yOiBFcnJvcikgPT4ge1xuICAgICAgICBpZiAoZXJyb3IpIHtcbiAgICAgICAgICAgIGNvbnNvbGUubG9nKFwiU29tZXRoaW5nIHdlbnQgd3JvbmcuIEVSUk9SIC0tLSA6IFwiICsgZXJyb3IpO1xuICAgICAgICB9XG4gICAgfVxuKTsiXX0=
